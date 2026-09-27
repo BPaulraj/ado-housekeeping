@@ -1,0 +1,46 @@
+
+
+ado.org.url=https://dev.azure.com/<your-org>
+ado.project=<your-project>
+# PAT: prefer the ADO_PAT environment variable. If you set it here, never commit this file.
+ado.pat=
+
+
+
+
+# ---- Teams (one block per scrum team; area is optional - blank uses the team's own area settings)
+team.1.name=<ADO team name>
+team.1.area=
+team.1.testers=
+#team.2.name=
+#team.2.area=
+#team.2.testers=
+#team.3.name=
+#team.3.area=
+#team.3.testers=
+#team.4.name=
+#team.4.area=
+#team.4.testers=
+
+# ---- Who is a tester (so developer tasks are never counted)
+# Priority: team.N.testers + testers (explicit emails, comma separated)  ->  otherwise capacity Activity below.
+# testers=tester.a@company.com,tester.b@company.com   (testers shared across all teams)
+tester.activities=Testing
+# testers.exclude=qa.lead@company.com                (never treat as tester, e.g. the test manager)
+
+# ---- Optional
+report.output.dir=reports
+# report.testplan.filter=Sprint                      (regex on test plan name; blank = all plans)
+# report.timezone=Asia/Kolkata                       (needs: pip install tzdata; blank = machine local)
+# rule.util.over=1.10
+# rule.util.under=0.60
+# rule.stale.days=2
+# rule.max.daily.hours=10
+# rule.estimate.overrun=2.0
+# report.repos.include=automation|qa                (regex on repo names for commits/PRs; blank = all repos)
+# report.bug.rejected.reasons=As Designed,Cannot Reproduce,Duplicate,Obsolete   (reasons counted as rejected bugs)
+# rule.testcase.design.states=Design                 (test case states that count as "not ready" for H16)
+
+# ---- Hygiene rules (defined in tqa/rules.py) - switch off or re-grade any rule
+# rule.H07.enabled=false
+# rule.H04.severity=High
